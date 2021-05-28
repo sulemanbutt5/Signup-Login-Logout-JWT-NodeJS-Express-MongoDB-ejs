@@ -41,9 +41,14 @@
         emailError.textContent = data.errors.email;
         passwordError.textContent = data.errors.password;
       }
-      if (data) {
-        console.log('DATA.....',data)
+      if (data.errors==null) {
+        console.log('DATA.....',data.user)
+        location.assign('/');
+      }
+      else{
+        console.log('DATA.....',data.errors)
         //location.assign('/');
+
       }
     }
     catch(e){
